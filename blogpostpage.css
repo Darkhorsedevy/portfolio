@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas, sans-serif;
+}
+
+/* body{
+    width: 100vw;
+    height: fit-content;
+} */
+
+/* body h1{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    color: var(--post-text-color);
+} */
+.blogpost-container{
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    /* border: 1px solid black; */
+    margin-bottom: 100px;
+}
+.blog-pages{
+    background-color: var(--text-background);
+    /* border: 1px solid black; */
+    padding: 15px;
+    /* color: var(--post-text-color); */
+    box-shadow: var(--box-shadow);
+}
+.blog-pages img{
+    width: 100%;
+    height: 300px;
+}
+.blog-pages h3{
+    text-align: center;
+}
+
+/*======mobile responsive======*/
+@media only screen and (max-width:1024px){
+    nav, header, main, .footer-section{
+        width: 90%;
+    }
+    .blogpost-container{
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        /* border: 1px solid black; */
+        margin-bottom: 100px;
+    }
+}
+@media only screen and (max-width:500px){
+    .blogpost-container{
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        /* border: 1px solid black; */
+        margin-bottom: 100px;
+    }
+    
+}
+
+@media only screen and (max-width:600px){
+    nav, header, main, .footer-section{
+        width: 94%;
+    }
+    body{
+        width: 100vw;
+        height: fit-content;
+    }
+    /* body h1{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        height: 150px;
+        line-height: 150px;
+        color: var(--post-text-color);
+    } */
+    .blogpost-container{
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        /* border: 1px solid black; */
+        margin-bottom: 100px;
+    }
+    .blog-pages{
+        /* border: 1px solid black; */
+        padding: 5px;
+        /* color: var(--post-text-color); */
+        box-shadow: var(--box-shadow);
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width:450px){
+    .blogpost-container{
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        /* border: 1px solid black; */
+        margin-bottom: 100px;
+    }
+}

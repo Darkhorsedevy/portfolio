@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new toggle</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins, sans-serif;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        :root{
+            --primary-color: white;
+            --secondary-color: rgb(14, 197, 151);   /*hexcode: #0ec597*/
+            --hover-color: #09a590;
+            --tertiary-color: #054d43;
+            --post-text-color:#444;
+        }
+        #covering{
+            width: 80px;
+            height: 40px;
+            border: 2px solid white;
+            border-radius: 20px;
+            color: white;
+            background-color: lightslategray;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }
+        #lightBtn{
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            /* background-color: green; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+        #darkBtn{
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            /* background-color: green; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        #moverBtn{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .fa-sun, .fa-moon{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="covering">
+        <div id="moverBtn"></div>
+        <div id="lightBtn" onclick="handleLightMode()"><i class="fa fa-sun"></i></div>
+        <div id="darkBtn" onclick="handleDarkMode()"><i class="fa fa-moon"></i></div>
+    </div>
+    <script src="js_files/toggle-switch.js"></script>
+</body>
+</html>

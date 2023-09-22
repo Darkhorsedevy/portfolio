@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="CSS_FILES/form-validation.css">
+</head>
+<body id="body">
+    <form action="portfolio-website.html" name="regForm">
+        <!-- <button title="exit form" id="exit"><i class="fa fa-xmark"></i></button> -->
+        <h2>Registration Form</h2>
+        <label for="username" id="nameLabel">Enter Name:</label><br>
+        <input type="text" name="Name" id="name" required><br>
+        <label for="email" id="emailLabel">Enter Email:</label><br>
+        <input type="email" name="Email" id="email" required><br>
+        <label for="password" id="pLabel">Enter Password:</label><br>
+        <input type="password" name="Password" id="password" required><br>
+        <label for="password" id="cpLabel">Confirm Password:</label><br>
+        <input type="password" name="confirmPassword" id="password" required><br>
+        <input type="submit" name="submit" value="SIGN UP" onclick="validateForm()">
+    </form>
+    <script src="JS_FILES/form-validation.js"></script>
+</body>
+</html>

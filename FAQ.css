@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    padding: 20px;
+    border: 1px solid black;
+}
+.wrapper-div{
+    width: 400px;
+    height: fit-content;
+    border: 1px solid black;
+}
+.dropDown{
+    display: none;
+    padding: 20px;
+    border: 1px solid black;
+    width: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.fa-plus{
+    font-size: 25px;
+    font-weight: bolder;
+    color: red;
+}
+
+button{
+    font-size: 30px;
+    font-weight: bolder;
+    width: 2em;
+}
+
+.fa-minus{
+    font-size: 25px;
+    font-weight: bolder;
+    color: red;
+}

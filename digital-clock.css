@@ -1,0 +1,31 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+#digital-clock-container{
+    width: inherit;
+}
+
+#digitalClockLabel{
+    font:60px bolder;
+    background-color: #0ec597;  /*#23E3C9*/
+    font-family: consolas;
+    width: inherit;
+    padding-left: 4%;
+    padding-right: 4%;
+    height: fit-content;
+    color: white;
+    /* border: 2px solid black;
+    border-radius: 15px; */
+}

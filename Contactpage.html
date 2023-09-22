@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="CSS_FILES/Homepage.css">
+    <link rel="stylesheet" href="CSS_FILES/contactpage.css">
+</head>
+<body>
+    <div class="navigation">
+        <nav class="clearfix">
+            <div class="floater1">
+                <i class="fa fa-bars"></i>
+                <!-- <i class="fa fa-xmark"></i> -->
+                <span class="nav-menu">
+                    <a class="anchor" href="Aboutpage.html">About</a>
+                <a class="anchor" href="Projectspage.html">Projects</a>
+                <a class="anchor" href="Blogpostpage.html">Blog</a>
+                </span>
+                
+            </div>
+            <div class="floater home-icon">
+                <a href="index.html"><i class="fa fa-home"></i></a>
+            </div>
+            <div class="floater contact-divi">
+                <a href="Contactpage.html">
+                    <i class="fa fa-phone"></i>
+                    <button id="contact-bn">Contact</button>
+                </a>
+            </div>
+        </nav>
+    </div>
+    
+    <main>
+        <h1>Contact Me Today!</h1>
+        <div class="wrapper-div clearfix">
+            <div class="inner-div">
+                <img src="images/3426526.jpg" alt="">
+            </div>
+            <div class="inner-div">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Full Name" required><br>
+                    <input type="email" name="" id="" placeholder="Email Address" required><br>
+                    <input type="text" name="" id="" placeholder="Subject" required><br>
+                    <textarea name="" id="" rows="10" placeholder="Compose Message"></textarea><br>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <section id="footer-section1">
+                <div class="get-started">
+                    <div id="toggle-cover">
+                        <div id="moverBtn"></div>
+                        <div id="lightBtn" onclick="handleLightMode()"><i class="fa fa-sun"></i></div>
+                        <div id="darkBtn" onclick="handleDarkMode()"><i class="fa fa-moon"></i></div>
+                    </div>
+                    <div class="ready">
+                        <h3>
+                            Ready to get Started?
+                        </h3>
+                        <p>Lets talk now</p>
+                    </div>
+                    <button>Get Started</button>
+                </div>
+                
+            </section>
+            <section id="footer-section2">
+                <div>
+                    <i class="fa fa-home"></i><br>
+                    <i class="social fab fa-facebook"></i><br>
+                    <i class="social fab fa-whatsapp"></i><br>
+                    <i class="social fab fa-instagram"></i>
+                </div>
+                <div>
+                    <h4>Projects</h4>
+                    <h4>Testmonials</h4>
+                    <h4>FAQs</h4>
+                    <h4>Hire as Tutor</h4>
+                </div>
+                <div>
+                    <h4>Join our online community. No spam. ever</h4>
+                    
+                    <form>
+                        <input type="email" name="client-email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+            <section id="footer-changetheme">
+                <div class="changeTheme">
+                    <button class="changeThemeBtn">
+                        change theme
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+                    <div class="themeEditor">
+                        <div>
+                            <label for="postTextColor">post text color:</label><input type="color" id="postTextColor" value="#444444">
+                        </div>
+                        <div>
+                            <label for="textBackgroundColor">text background color:</label><input type="color" id="textBackgroundColor" value="#cff3a6">
+                        </div>
+                        <div>
+                            <label for="primaryColor">Primary Color:</label><input type="color" id="primaryColor" value="#ffffff">
+                        </div>
+                        <div>
+                            <label for="secondaryColor">Secondary Color:</label><input type="color" id="secondaryColor" value="#0ec597">
+                        </div>
+                        <div>
+                            <label for="tertiaryColor">Tertiary Color:</label><input type="color" id="tertiaryColor" value="#054d43">
+                        </div>
+                        <div>
+                            <label for="hoverColor">Hover Color:</label><input type="color" id="hoverColor" value="#10eeb6">
+                        </div>
+                        <div>
+                            <label for="bodyColor">Body Color:</label><input type="color" id="bodyColor" value="#ffffff">
+                        </div>
+                        <div>
+                            <label for="defaultColor">Restore default colors:</label><input type="checkbox" id="defaultColor">
+                        </div>
+                        <button onclick="makeChanges()">Make Changes</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="footer-section3">
+            <small>copyright@2023|All rights reserved|Terms and Conditions</small>
+        </section>
+    </footer>
+    <script src="./JS_FILES/navigation.js"></script>
+    <script src="./JS_FILES/change-theme.js"></script>
+</body>
+</html>

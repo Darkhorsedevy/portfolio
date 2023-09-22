@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="CSS_FILES/Homepage.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="CSS_FILES/testimonial-carousel.css">
+    <link rel="stylesheet" href="CSS_FILES/to-do-list.css">
+    <link rel="stylesheet" href="CSS_FILES/digital-clock.css">
+    <link rel="stylesheet" href="CSS_FILES/number-counter.css">
+    <link rel="stylesheet" href="CSS_FILES/calculator.css">
+</head>
+<body>
+    
+    <div class="navigation">
+        <nav class="clearfix">
+            <div class="floater1">
+                <i class="fa fa-bars"></i>
+                <!-- <i class="fa fa-xmark"></i> -->
+                <span class="nav-menu">
+                    <a class="anchor" href="Aboutpage.html">About</a>
+                <a class="anchor" href="Projectspage.html">Projects</a>
+                <a class="anchor" href="Blogpostpage.html">Blog</a>
+                </span>
+                
+            </div>
+            <div class="floater home-icon">
+                <a href="index.html"><i class="fa fa-home"></i></a>
+            </div>
+            <div class="floater contact-divi">
+                <a href="Contactpage.html">
+                    <i class="fa fa-phone"></i>
+                    <button id="contact-bn">Contact</button>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <header>    
+        <div class="banner clearfix">
+            <div class="banner-left">
+                <h1>My name <br>
+                    is Danny
+                </h1>
+                <p>
+                    You can contact me today to build professional websites
+                    for your business!
+                </p>
+                <a href="MY_RESUME/MY RESUME.docx">
+                    <button>Download Resume</button>
+                </a>   
+                <a href="MY_RESUME/MY RESUME.pdf" target="_self">
+                    <button>View Resume</button>
+                </a>
+                <div>
+                    <i class="social fab fa-facebook"></i>
+                    <i class="social fab fa-whatsapp"></i>
+                    <i class="social fab fa-instagram"></i>
+                    <i class="social fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="banner-right">
+                <img src="images/6502423.jpg" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="categories">
+            <h1>Categories</h1>
+            <div class="fa-category">
+                <a href="#!">
+                    <i class="fab fa-html5"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-css3-alt"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-square-js"></i>
+                </a>
+            </div>
+        </div>
+        <h1>Latest Projects</h1>
+        <div class="grid-container">
+            <div class="hidden grid-items grid-item1">
+                <div class="card-title">
+                    <h3>Single page profile</h3>
+                </div>
+                
+                <i class="cardIcon fa fa-user-edit"></i>
+                <hr>
+                <a href="singlepageprofile.html" target="_blank">View Project</a>
+            </div>
+            <div class="hidden grid-items grid-item2">
+                <div class="card-title">
+                    <h3>css Image Carousel</h3>
+                </div>
+                
+                <i class="cardIcon fa fa-images"></i>
+                <hr>
+                <a href="css-img-carousel.html" target="_blank">View Project</a>
+            </div>
+            <div class="grid-items grid-item3">
+                <div class="card-title">
+                    <h3>To do list-JavaScript</h3>
+                </div>
+                
+                <i class="cardIcon fa fa-list"></i>
+                <hr>
+                <a onclick="toDoList()">View Project</a>
+            </div>
+            <div class="grid-items grid-item4">
+                <div class="card-title">
+                    <h3>JS Digital Clock</h3>
+                </div>
+                
+                <i class="cardIcon fa fa-clock"></i>
+                <hr>
+                <a onclick="digitalClock()">View Project</a>
+            </div>
+            <div class="grid-items grid-item5">
+                <div class="card-title">
+                    <h3>Simple Calculator</h3>
+                </div>
+                
+                <i class="cardIcon fa fa-calculator"></i>
+                <hr>
+                <a onclick="calculator()">View Project</a>
+            </div>
+            <div class="hidden grid-items grid-item6">
+                <div class="card-title">
+                    <h3>JS Number Counter</h3>
+                </div>
+                
+                <i class="cardIcon fa fa-stopwatch"></i>
+                <hr>
+                <a onclick="numberCounter()">View Project</a>
+            </div>
+            <div class="browse-div">
+                <a href="Projectspage.html" target="_blank">Browse Projects<i class="fa fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- <div class="grid-items grid-item1">
+                <h3>FAQ Page</h3>
+                <i class="cardIcon fa fa-question"></i>
+                <hr>
+                <a href="FAQsection.html" target="_blank">View Project</a>
+            </div>
+            <div class="grid-items grid-item2">
+                <h3>JS Image Carousel</h3>
+                <i class="cardIcon fa fa-images"></i>
+                <hr>
+                <a href="js-img-carousel.html" target="_blank">View Project</a>
+            </div>
+            <div class="grid-items grid-item3">
+                <h3>Form Validation</h3>
+                <i class="cardIcon fa fa-list"></i>
+                <hr>
+                <a onclick="formValidation()">View Project</a>
+            </div>
+            <div class="grid-items grid-item4">
+                <h3>HTML Table Layout</h3>
+                <i class="cardIcon fa fa-table"></i>
+                <hr>
+                <a href="tablelayout.html" target="_blank">View Project</a>
+            </div>
+            <div class="grid-items grid-item5">
+                <h3>CSS grid layout</h3>
+                <i class="cardIcon fa fa-grip-horizontal"></i>
+                <hr>
+                <a href="gridlayout.html" target="_blank">View Project</a>
+            </div>
+            <div class="grid-items grid-item6">
+                <h3>Number Counter</h3>
+                <i class="cardIcon fa fa-stopwatch"></i>
+                <hr>
+                <a onclick="numberCounter()">View Project</a>
+            </div> -->
+        </div>
+        <!-- <div class="latest-projects">
+            <h1>Latest Projects</h1>
+            <div class="grid-container">
+                <div class="grid-items grid-item1">
+                    <h3>Single page profile</h3>
+                    <i class="cardIcon fa fa-user-edit"></i>
+                    <hr>
+                    <a href="singlepageprofile.html" target="_blank">View Project</a>
+                </div>
+                <div class="grid-items grid-item2">
+                    <h3>css Image Carousel</h3>
+                    <i class="cardIcon fa fa-images"></i>
+                    <hr>
+                    <a href="css-img-carousel.html" target="_blank">View Project</a>
+                </div>
+                <div class="grid-items grid-item3">
+                    <h3>To do list</h3>
+                    <i class="cardIcon fa fa-list"></i>
+                    <hr>
+                    <a onclick="toDoList()">View Project</a>
+                </div>
+                <div class="grid-items grid-item4">
+                    <h3>Digital Clock</h3>
+                    <i class="cardIcon fa fa-clock"></i>
+                    <hr>
+                    <a onclick="digitalClock()">View Project</a>
+                </div>
+                <div class="grid-items grid-item5">
+                    <h3>Simple Calculator</h3>
+                    <i class="cardIcon fa fa-calculator"></i>
+                    <hr>
+                    <a onclick="calculator()">View Project</a>
+                </div>
+                <div class="grid-items grid-item6">
+                    <h3>Number Counter</h3>
+                    <i class="cardIcon fa fa-stopwatch"></i>
+                    <hr>
+                    <a onclick="numberCounter()">View Project</a>
+                </div>
+                <div class="browse-div">
+                    <a href="Projectspage.html" target="_blank">Browse Projects<i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div> -->
+            
+        </div>
+        <div class="testimonial">
+            <h1>What Clients Say...</h1>
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <div class="slide first">
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> Daniel Farke </h5>
+                               <small>student</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article>                      
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> David James </h5>
+                               <small>colleague</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article>                      
+                        <!-- <fieldset>
+                            <legend>
+                                <img src="images/man.png" alt="">
+                            </legend>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit fugit enim, veniam accusamus harum nisi illo illum expedita facere, esse dolorum mod
+                                i inventore dolore quo tempore beatae commodi rem optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, esse! Deleniti 
+                                optio possimus sint voluptatum non ipsam fugiat distinctio veritatis corrupti excepturi. Quas expedita illo blanditiis optio eos amet velit. Lorem ipsum dolor, si
+                                t amet consectetur adipisicing elit. Alias ipsam, tempore porro recusandae maxim
+                                e ducimus minus quisquam exercitationem harum officiis, sunt excepturi possimus. Ut sapiente accusamus adipisci perferendis obcaecati explicabo?
+                            </p>
+                        </fieldset> -->
+                    </div>
+                    <div class="slide">
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> princewill </h5>
+                               <small>student</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article> 
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5>Ayodeji Brown</h5>
+                               <small>website owner</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article> 
+                    </div>
+                    <div class="slide">
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> sean paul </h5>
+                               <small>copywriter</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article> 
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> rahman ahmed </h5>
+                               <small>product designer</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article> 
+                    </div>
+                    <div class="slide">
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> joe chike </h5>
+                               <small>student</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article> 
+                        <article class="testimonial-container">
+                            <div class="testimonial-avatar">
+                                <Img src="./IMAGES/man.png"alt="testimonial-image">
+                           </div>
+                           <div class="avatar-info">
+                               <h5> jane doe </h5>
+                               <small>tutor</small>
+                           </div>
+                           <div class="testimonial-info">
+                               <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sit recusandae obcaecati in neque laborum mollitia quas nihil temporibus tempore? Eum nostrum iusto impedit? Et sed enim eveniet suscipit provident vero? Fugit in, amet iure provident quae illum modi minima!  
+                               </p>
+                            </div>
+                       </article> 
+                    </div>
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="faq-div">
+            <h1>FAQ section</h1>
+                <section class="faq-container">
+                    <div class="faq1">
+                        <div class="faq-button">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.?
+                        </div>
+                        <div class="faq-answer">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ratione consequuntur 
+                            porro sit nesciunt harum in quos incidunt odio modi. Lorem ipsum dolor sit amet 
+                            consectetur adipisicing elit. Corporis, consequuntur.
+                        </div>
+                    </div>
+                    <hr class="faq-hr">
+                    <div class="faq2">
+                        <div class="faq-button">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.?
+                        </div>
+                        <div class="faq-answer">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ratione consequuntur 
+                            porro sit nesciunt harum in quos incidunt odio modi. Lorem ipsum dolor sit amet 
+                            consectetur adipisicing elit. Corporis, consequuntur.
+                        </div>
+                    </div>
+                    <hr class="faq-hr">
+                    <div class="faq3">
+                        <div class="faq-button">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.?
+                        </div>
+                        <div class="faq-answer">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ratione consequuntur 
+                            porro sit nesciunt harum in quos incidunt odio modi. Lorem ipsum dolor sit amet 
+                            consectetur adipisicing elit. Corporis, consequuntur.
+                        </div>
+                    </div>
+                    <hr class="faq-hr">
+                    <div class="faq4">
+                        <div class="faq-button">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.?
+                        </div>
+                        <div class="faq-answer">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ratione consequuntur 
+                            porro sit nesciunt harum in quos incidunt odio modi. Lorem ipsum dolor sit amet 
+                            consectetur adipisicing elit. Corporis, consequuntur.
+                        </div>
+                    </div>
+                </section>
+        </div> -->
+        <div class="faqs">
+            <h1>FAQ section</h1>
+            <div class="faq-wrapper">
+                <article class="faq">
+                    <div class="faq-icon">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="question-answer">
+                        <h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis?
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa porro voluptas, enim ratione autem architecto quibusdam aspernatur explicabo dolor necessitatibus fugiat repellat, vel eius reprehenderit illum quidem. Nisi, velit iusto.
+                        </p>
+                    </div>
+                </article>
+                <article class="faq">
+                    <div class="faq-icon">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="question-answer">
+                        <h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis?
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa porro voluptas, enim ratione autem architecto quibusdam aspernatur explicabo dolor necessitatibus fugiat repellat, vel eius reprehenderit illum quidem. Nisi, velit iusto.
+                        </p>
+                    </div>
+                </article>
+                <article class="faq">
+                    <div class="faq-icon">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="question-answer">
+                        <h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis?
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa porro voluptas, enim ratione autem architecto quibusdam aspernatur explicabo dolor necessitatibus fugiat repellat, vel eius reprehenderit illum quidem. Nisi, velit iusto.
+                        </p>
+                    </div>
+                </article>
+                <article class="faq">
+                    <div class="faq-icon">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="question-answer">
+                        <h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis?
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa porro voluptas, enim ratione autem architecto quibusdam aspernatur explicabo dolor necessitatibus fugiat repellat, vel eius reprehenderit illum quidem. Nisi, velit iusto.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <section id="footer-section1">
+                <div class="get-started">
+                    <div id="toggle-cover">
+                        <div id="moverBtn"></div>
+                        <div id="lightBtn" onclick="handleLightMode()"><i class="fa fa-sun"></i></div>
+                        <div id="darkBtn" onclick="handleDarkMode()"><i class="fa fa-moon"></i></div>
+                    </div>
+                    <div class="ready">
+                        <h3>
+                            Ready to get Started?
+                        </h3>
+                        <p>Lets talk now</p>
+                    </div>
+                    <button>Get Started</button>
+                </div>
+            </section>
+            <section id="footer-section2">
+                <div>
+                    <i class="fa fa-home"></i><br>
+                    <i class="social fab fa-facebook"></i><br>
+                    <i class="social fab fa-whatsapp"></i><br>
+                    <i class="social fab fa-instagram"></i>
+                </div>
+                <div>
+                    <h4>Projects</h4>
+                    <h4>Testmonials</h4>
+                    <h4>FAQs</h4>
+                    <h4>Hire as Tutor</h4>
+                </div>
+                <div>
+                    <h4>Join our online community. No spam. ever</h4>
+                    
+                    <form>
+                        <input type="email" name="client-email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+            <section id="footer-changetheme">
+                <div class="changeTheme">
+                    <button class="changeThemeBtn">
+                        change theme
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+                    <div class="themeEditor">
+                        <div>
+                            <label for="postTextColor">post text color:</label><input type="color" id="postTextColor" value="#444444">
+                        </div>
+                        <div>
+                            <label for="textBackgroundColor">text background color:</label><input type="color" id="textBackgroundColor" value="#cff3a6">
+                        </div>
+                        <div>
+                            <label for="primaryColor">Primary Color:</label><input type="color" id="primaryColor" value="#ffffff">
+                        </div>
+                        <div>
+                            <label for="secondaryColor">Secondary Color:</label><input type="color" id="secondaryColor" value="#0ec597">
+                        </div>
+                        <div>
+                            <label for="tertiaryColor">Tertiary Color:</label><input type="color" id="tertiaryColor" value="#054d43">
+                        </div>
+                        <div>
+                            <label for="hoverColor">Hover Color:</label><input type="color" id="hoverColor" value="#10eeb6">
+                        </div>
+                        <div>
+                            <label for="bodyColor">Body Color:</label><input type="color" id="bodyColor" value="#ffffff">
+                        </div>
+                        <div>
+                            <label for="defaultColor">Restore default colors:</label><input type="checkbox" id="defaultColor">
+                        </div>
+                        <button onclick="makeChanges()">Make Changes</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="footer-section3">
+            <small>copyright@2023|All rights reserved|Terms and Conditions</small>
+        </section>
+    </footer>
+    <!-- or just x -->
+    <div id="pop-up-div">
+        <button class="pop-up-btn" onclick="removePopUp()"><i class="fa fa-xmark"></i></button>    
+       <div class="pop-up-container">
+        <div id="number-counter-container">
+            <label id="myLabel">0</label>
+            <div class="number-btns">
+                <button id="decreaseBtn">decrease</button>
+                <button id="resetBtn">reset</button>
+                <button id="increaseBtn">increase</button>
+            </div>
+            
+        </div>
+        <div id="digital-clock-container">
+            <label id="digitalClockLabel"></label>
+        </div>
+        <div id="to-do-list-container">
+            <div id="myDiv" class="header">
+                <h2>My To Do List</h2>
+                <input type="text" id="myInput" name="toDoInput" placeholder="Add Title...">
+                <span class="addBtn" onclick="newElement()">Add</span>
+            </div>
+            <ol id="myOL">
+                <li>Get to School</li>
+                <li class="checked">Pay Bills</li>
+                <li>Buy Eggs</li>
+                <li>Buy Fish</li>
+                <li>Buy Fruits</li>
+                <li>Buy Vegetables</li>
+            </ol>
+        </div>
+        <div id="calculator-container">
+            <div class="calc-container">
+                <div id="txtwrapper">
+                    <input type="text" value="" name="" id="inputField" disabled>
+            
+                </div>
+                <div class="btnwrapper">
+                    <input type="button" value="1" onclick="createExp(this.value)">
+                    <input type="button" value="2" onclick="createExp(this.value)">
+                    <input type="button" value="3" onclick="createExp(this.value)">
+                    <input type="button" value="4" onclick="createExp(this.value)">
+                </div>
+                <div class="btnwrapper">
+                    <input type="button" value="5" onclick="createExp(this.value)">
+                    <input type="button" value="6" onclick="createExp(this.value)">
+                    <input type="button" value="7" onclick="createExp(this.value)">
+                    <input type="button" value="8" onclick="createExp(this.value)">
+                </div>
+                <div class="btnwrapper">
+                    <input type="button" value="9" onclick="createExp(this.value)">
+                    <input type="button" value="0" onclick="createExp(this.value)">
+                    <input type="button" value="." onclick="createExp(this.value)">
+                    <input type="button" value="=" onclick="calculate()">
+                </div>
+                <div class="btnwrapper">
+                    <input type="button" value="+" onclick="createExp(this.value)">
+                    <input type="button" value="-" onclick="createExp(this.value)">
+                    <input type="button" value="*" onclick="createExp(this.value)">
+                    <input type="button" value="/" onclick="createExp(this.value)">
+                </div>
+                <div class="btnwrapper">
+                    <input type="button" value="%" onclick="createExp(this.value)">
+                    <input type="button" value="(" onclick="createExp(this.value)">
+                    <input type="button" value=")" onclick="createExp(this.value)">
+                    <input type="button" value="AC" onclick="clearExp()">    
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+
+    <script src="JS_FILES/viewprojects.js"></script>
+    <script src="js_files/FAQsection.js"></script>
+    <script src="JS_FILES/number-counter.js"></script>
+    <script src="js_files/digital-clock.js"></script>
+    <script src="js_files/to-do-list.js"></script>
+    <script src="js_files/calculator.js"></script>
+    <script src="js_files/js-img-carousel.js"></script>
+    <script src="./JS_FILES/navigation.js"></script>
+    <script src="js_files/form-validation.js"></script>
+    <script src="./JS_FILES/change-theme.js"></script>
+</body>
+
+</html>

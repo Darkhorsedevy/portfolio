@@ -1,0 +1,75 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: "consolas", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+#number-counter-container{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px; */
+    width: inherit;
+    height: fit-content;
+    /* border: 2px solid black; */
+}
+
+.number-btns{
+    /* margin: 20px 0;
+    width: fit-content;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row; */
+    /* border: 1px solid black; */
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#myLabel{
+    display: block;
+    font-weight: bold;
+    border: 2px solid #054d43;
+    /* padding: 10px; */
+    width: 85%;
+    text-align: center;
+    font-size: 100px;
+    padding: 10%;
+    margin: 0 auto;
+    color: #054d43;
+}
+
+.number-btns button{
+    font-weight: bold;
+    padding: 16px;
+    height: 50px;
+    margin: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #0ec597;
+    color: white;
+}
+
+/* input{
+    padding: 5px;
+    font-weight: bolder;
+    margin-left: 80%;
+    background-color: transparent;
+    font-stretch: expanded;
+    border: none;
+    cursor: pointer;
+} */

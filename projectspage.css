@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas, sans-serif;
+}
+
+/* body{
+    width: 100vw;
+    height: fit-content;
+} */
+
+/* body h1{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    color: var(--post-text-color);
+} */
+
+/* .faqs{
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+} */
