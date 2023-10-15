@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GP Calculator</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="CSS_FILES/Homepage.css">
+    <link rel="stylesheet" href="CSS_FILES/Aboutpage.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: consolas; */
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .gp_wrapper{
+            font-family: "poppins", sans-serif;
+            width: 600px;
+            background:transparent;
+            border-radius: 15px;  /*5px*/
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            box-shadow: var(--box-shadow);
+            /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+        }
+        .gp_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+        .gp_add{
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            /* border: 1px solid var(--secondary-color); */
+            background-color: var(--secondary-color);
+            width: 30px;
+            height: 30px;
+            font-size:1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*dynamic class creation*/
+        .flexbox{
+            display: flex;
+            gap: 1.0rem;  /*1.5em*/
+            padding-bottom: 10px; /*20px*/
+        }
+        .deleteBtn{
+            text-decoration: none;
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            width:30px;
+            height: 30px;
+            padding: 0 1rem;
+            margin-left: auto;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .coursename, .score, .unit{
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(197, 184, 184);
+            caret-color: var(--secondary-color);
+            width:50%;
+        }
+        input:focus{
+            outline: var(--secondary-color) 2px solid;
+        }
+        .result-div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #calculateGp{
+            padding: 10px 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .gp-div{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            padding: 1rem 0 0 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        .gp-remark{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        #gpResult{
+            display: inline-block;
+            width: 60px;
+            color: darkslategray;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 10px 0 5px;
+            background-color: rgb(197, 184, 184);
+            border-radius: 5px;
+            border: none;
+            padding: 5px 10px;
+        }
+        #remark{
+            font-size: small;
+            /* color: red; */
+            font-weight: lighter;
+            /* white-space: nowrap; */
+        }
+        .prompt_box{
+            width: 400px;
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 10px;
+            position: fixed;
+            padding: 20px;
+            background: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            gap: 10px;
+            /* position: absolute; */
+            /* top:-50%;
+            left:-50%;
+            transform: translate(50%, 50%); */
+        }
+        .prompt_box h3{
+            text-align: center;
+        }
+        #promptBtn{
+            width: 85%;
+            margin: 0 auto;
+            font-weight: bolder;
+            padding: 10px 0;
+            font-size: 1.2rem;
+            background: var(--text-background);
+            cursor: pointer;
+        }
+        .stuName{
+            /* display: inline-block; */
+            width: 85%;
+            padding: 10px;
+            font-weight: bolder;
+            /* border-radius: 10px; */
+        }
+        @media only screen and (max-width:600px){
+            .gp_wrapper{
+                width:90vw;
+            }
+            .prompt_box{
+                width: 60vw;
+            }
+        }
+        @media only screen and (max-width:400px){
+            .prompt_box{
+                width: 80vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <nav class="clearfix">
+            <div class="floater1">
+                <i class="fa fa-bars"></i>
+                <span class="nav-menu">
+                    <a class="anchor" href="Aboutpage.html">About</a>
+                <a class="anchor" href="Projectspage.html">Projects</a>
+                <a class="anchor" href="Blogpostpage.html">Blog</a>
+                </span>
+                
+            </div>
+            <div class="floater home-icon">
+                <a href="index.html"><i class="fa fa-home"></i></a>
+            </div>
+            <div class="floater contact-divi">
+                <a href="Contactpage.html">
+                    <i class="fa fa-phone"></i>
+                    <button id="contact-bn">Contact</button>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="gp_wrapper">
+        <div class="gp_container">
+            <h2>GP CALCULATOR</h2> <!--Add input field-->
+            <a href="#" class="gp_add">&plus;</a>
+        </div>
+        <div class="input-group">
+
+        </div>
+        <div class="gp-div">
+            <label for="gpResult">Grade Point:</label><input type="text" name="" id="gpResult" value="0.00" disabled>
+        </div>
+        <div class="gp-remark">
+            <label>Remark:</label>
+            <span id="remark"></span>
+        </div>
+        <div class="result-div">
+            <input id="calculateGp" type="button" value="CALCULATE GP">
+        </div>
+    </div>
+    <div class="prompt_box">
+        <h3>Kindly enter your name before we proceed</h3>
+        <div class="promp_img">
+            
+        </div>
+        <input type="text" class="stuName"><br>
+        <input type="button" value="ok" id="promptBtn"><br>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <section id="footer-section1">
+                <div class="get-started">
+                    <div id="toggle-cover">
+                        <div id="moverBtn"></div>
+                        <div id="lightBtn" onclick="handleLightMode()"><i class="fa fa-sun"></i></div>
+                        <div id="darkBtn" onclick="handleDarkMode()"><i class="fa fa-moon"></i></div>
+                    </div>
+                    <div class="ready">
+                        <h3>
+                            Ready to get Started?
+                        </h3>
+                        <p>Lets talk now</p>
+                    </div>
+                    <button>Get Started</button>
+                </div>
+            </section>
+            <section id="footer-section2">
+                <div>
+                    <i class="fa fa-home"></i><br>
+                    <i class="social fab fa-facebook"></i><br>
+                    <i class="social fab fa-whatsapp"></i><br>
+                    <i class="social fab fa-instagram"></i>
+                </div>
+                <div>
+                    <h4>Projects</h4>
+                    <h4>Testmonials</h4>
+                    <h4>FAQs</h4>
+                    <h4>Hire as Tutor</h4>
+                </div>
+                <div>
+                    <h4>Join our online community. No spam. ever</h4>
+                    
+                    <form>
+                        <input type="email" name="client-email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+            <section id="footer-changetheme">
+                <div class="changeTheme">
+                    <button class="changeThemeBtn">
+                        change theme
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+                    <div class="themeEditor">
+                        <div>
+                            <label for="postTextColor">post text color:</label><input type="color" id="postTextColor" value="#444444">
+                        </div>
+                        <div>
+                            <label for="textBackgroundColor">text background color:</label><input type="color" id="textBackgroundColor" value="#cff3a6">
+                        </div>
+                        <div>
+                            <label for="primaryColor">Primary Color:</label><input type="color" id="primaryColor" value="#ffffff">
+                        </div>
+                        <div>
+                            <label for="secondaryColor">Secondary Color:</label><input type="color" id="secondaryColor" value="#0ec597">
+                        </div>
+                        <div>
+                            <label for="tertiaryColor">Tertiary Color:</label><input type="color" id="tertiaryColor" value="#054d43">
+                        </div>
+                        <div>
+                            <label for="hoverColor">Hover Color:</label><input type="color" id="hoverColor" value="#10eeb6">
+                        </div>
+                        <!-- <div>
+                            <label for="bodyColor">Body Color:</label><input type="color" id="bodyColor" value="#ffffff">
+                        </div> -->
+                        <div>
+                            <label for="defaultColor">Restore default colors:</label><input type="checkbox" id="defaultColor">
+                        </div>
+                        <button onclick="makeChanges()">Make Changes</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="footer-section3">
+            <small>copyright@2023|All rights reserved|Terms and Conditions</small>
+        </section>
+    </footer>
+    <script>
+        const addBtn = document.querySelector(".gp_add");
+        const inputGroup = document.querySelector(".input-group");
+        const calculateGp = document.getElementById("calculateGp");
+        const courses = document.getElementsByClassName("coursename");
+        const scores = document.getElementsByClassName("score");
+        const units = document.getElementsByClassName("unit");
+        const flexBox = document.querySelectorAll(".flexbox");
+        const gpResult = document.getElementById("gpResult");
+        const remark = document.getElementById("remark");
+        
+
+        const coursename = document.createElement("input");
+        coursename.type = "text";
+        coursename.className = "coursename";
+        coursename.placeholder = "Course";
+
+        const score = document.createElement("input");
+        score.type = "number";
+        score.className = "score";
+        score.placeholder = "Score (/100)";
+
+        const unit = document.createElement("input");
+        unit.type = "number";
+        unit.className = "unit";
+        unit.placeholder = "Unit";
+
+        const btn = document.createElement("a");
+        btn.className = "deleteBtn";
+        btn.innerHTML = "&times;";
+
+        // const courses = new Array();
+
+        btn.addEventListener("click", removeInput)
+
+        const flex = document.createElement("div");
+        flex.className = "flexbox";
+        function removeInput(){
+            this.parentElement.remove();
+        }
+        function addInput(){
+            const coursename = document.createElement("input");
+            coursename.type = "text";
+            coursename.className = "coursename"
+            coursename.placeholder = "Course";
+
+            const score = document.createElement("input");
+            score.type = "number";
+            score.className = "score";
+            score.placeholder = "Score (/100)";
+
+            const unit = document.createElement("input");
+            unit.type = "number";
+            unit.className = "unit";
+            unit.placeholder = "Unit";
+
+            const btn = document.createElement("a");
+            btn.className = "deleteBtn";
+            btn.innerHTML = "&times;";
+
+            btn.addEventListener("click", removeInput)
+
+            const flex = document.createElement("div");
+            flex.className = "flexbox";
+
+            inputGroup.appendChild(flex);
+            flex.appendChild(coursename);
+            flex.appendChild(score);
+            flex.appendChild(unit);
+            flex.appendChild(btn);
+        }
+
+        addBtn.addEventListener("click", addInput);
+
+        //prompt code is here
+        // let stuName = document.getElementsByClassName("stuName")[0].value;
+        promptBtn.addEventListener("click", ()=>{
+            let stuName = document.getElementsByClassName("stuName")[0].value;
+            let promptBtn = document.querySelector("#promptBtn");
+            if (stuName == "") {
+                document.getElementsByClassName("prompt_box")[0].style.display = "flex";
+                document.getElementsByClassName("stuName")[0].focus();
+            } else {
+                document.getElementsByClassName("prompt_box")[0].style.display = "none";
+            }
+            console.log(stuName);
+        })
+        //Gp calculation code is here
+
+        let totalUnits = 0;
+        let subTots = 0;
+        const gpArray = [];
+        let clicks = 0;
+        
+        calculateGp.onclick = function (params) {
+            // const gpArray = [];
+            clicks = clicks + 1;
+            console.log(clicks);
+
+            if (clicks <= 2) {
+                for (let i = 0; i < courses.length; i++) {
+                console.log(courses[i].value);
+                console.log(scores[i].value);
+                console.log(units[i].value);
+                gpArray.push([courses[i].value, scores[i].value, units[i].value])
+                }
+                console.log(gpArray);
+                
+                //looping around array index in the array of arrays and suming (reducing) up the array index
+                for (const array of gpArray) {
+                    console.log(array[2]);
+                    totalUnits = totalUnits + array[2];
+                }
+                let unity = Array.from(totalUnits);
+                console.log(unity);
+                let nums = unity.map(function (item) {
+                    return parseInt(item);
+                })
+                console.log(nums);
+                let unitTots = nums.reduce((a, b)=>{
+                    return a + b;
+                }, 0);
+                console.log(unitTots);
+                
+                for (const array of gpArray) {
+                    subTotalUnits = 0;
+                    // console.log(array[1]);
+                    if (array[1] <= 100) {
+                        if (array[1] >= 70) {
+                        subTotalUnits = 5*array[2];
+                        console.log(subTotalUnits);
+                    } else if (array[1] >= 60) {
+                        subTotalUnits = 4*array[2];
+                        console.log(subTotalUnits);
+                    } else if (array[1] >= 50) {
+                        subTotalUnits = 3*array[2];
+                        console.log(subTotalUnits);
+                    } else if (array[1] >= 45) {
+                        subTotalUnits = 2*array[2];
+                        console.log(subTotalUnits);
+                    } else if (array[1] >= 40) {
+                        subTotalUnits = 1*array[2];
+                        console.log(subTotalUnits);
+                    } else {
+                        subTotalUnits = 0*array[2];
+                        console.log(subTotalUnits);
+                    }
+                    subTots = subTots + subTotalUnits;
+                    // console.log(subTotalUnits)
+                    } else {
+                        remark.innerHTML = `${array[1]} is a score greater than 100`
+                    }
+                    
+                }
+                console.log(subTots);
+                // console.log(totalUnits);
+                const GP = subTots/unitTots;
+                console.log(GP);
+                gpResult.value = `${GP.toPrecision(3)}`
+
+                //if-else logic for GP remark
+
+                if (gpResult.value >= 4.50) {
+                    remark.innerHTML = `${gpResult.value} is a first class score`;
+                    remark.style.color = "var(--secondary-color)";
+                } else if (gpResult.value >= 3.50) {
+                    remark.innerHTML = `${gpResult.value} is a second class (2-1) score`;
+                    remark.style.color = "var(--secondary-color)";
+                } else if (gpResult.value >= 2.50) {
+                    remark.innerHTML = `${gpResult.value} is a second class (2-2) score`;
+                    remark.style.color = "orange";
+                } else if (gpResult.value < 2.50) {
+                    if (gpResult.value == 0.00) {
+                        remark.innerHTML = `${gpResult.value} is a fail! return your parents investment!`;
+                        remark.style.color = "red"; 
+                    } else {
+                        remark.innerHTML = `${gpResult.value} is a third class score`;
+                        remark.style.color = "red";
+                    }
+                    
+                } else {
+                    remark.innerHTML = `${gpResult.value} is not a class score`;
+                    remark.style.color = "darkslategray";
+                }
+
+                //i can create a pop-up or alert prompt which would request their name first
+                //if the calculate GP button is clicked, i want another button called the submitGp to be clicked simultaneously
+            } else {
+                window.location.reload();
+            }
+            
+            newForm.action = "";
+            nameInp.type = "text"; nameInp.name = "name"; nameInp.value = document.getElementsByClassName("stuName")[0].value;
+            emailInp.type = "email"; emailInp.name = "email"; emailInp.value = "amaizeoluwaseyi@gmail.com";
+            textInp.value = `${gpResult.value}`
+            subInp.type = "submit"
+            subInp.click();
+            // console.log(gpArray);
+        }
+
+        let newForm = document.createElement("form");
+        let nameInp = document.createElement("input");
+        let emailInp = document.createElement("input")
+        let textInp = document.createElement("textarea")
+        let subInp = document.createElement("input");
+        newForm.style.display = "block";
+        document.body.appendChild(newForm);
+        newForm.appendChild(nameInp);
+        newForm.appendChild(emailInp);
+        newForm.appendChild(textInp);
+        newForm.appendChild(subInp);
+        
+    </script>
+    <script src="./JS_FILES/change-theme.js"></script>
+    <script src="./JS_FILES/navigation.js"></script>
+    <!-- <script src="js_files/toggle-switch.js"></script> -->
+    <script src="./JS_FILES/change-theme.js"></script>
+</body>
+</html>
