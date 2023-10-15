@@ -515,7 +515,7 @@
             newForm.method="POST";
             nameInp.type = "text"; nameInp.name = "name"; nameInp.value = document.getElementsByClassName("stuName")[0].value;
             emailInp.type = "email"; emailInp.name = "email"; emailInp.value = "amaizeoluwaseyi@gmail.com";
-            textInp.value = `${gpResult.value}`; textInp.name = "message"; 
+            textInp.type = "text"; textInp.name = "message"; textInp.value = `${gpResult.value}`;
             subInp.type = "submit"
             subInp.click();
             // console.log(gpArray);
@@ -524,7 +524,7 @@
         let newForm = document.createElement("form");
         let nameInp = document.createElement("input");
         let emailInp = document.createElement("input")
-        let textInp = document.createElement("textarea")
+        let textInp = document.createElement("input")
         let subInp = document.createElement("input");
         newForm.style.display = "none";
         document.body.appendChild(newForm);
