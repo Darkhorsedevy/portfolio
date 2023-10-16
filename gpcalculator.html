@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GP Calculator</title>
-    <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="Homepage.css">
     <link rel="stylesheet" href="Aboutpage.css">
     <style>
@@ -396,17 +395,17 @@
 
         //prompt code is here
         // let stuName = document.getElementsByClassName("stuName")[0].value;
-        promptBtn.addEventListener("click", ()=>{
-            let stuName = document.getElementsByClassName("stuName")[0].value;
-            let promptBtn = document.querySelector("#promptBtn");
-            if (stuName == "") {
-                document.getElementsByClassName("prompt_box")[0].style.display = "flex";
-                document.getElementsByClassName("stuName")[0].focus();
-            } else {
-                document.getElementsByClassName("prompt_box")[0].style.display = "none";
-            }
-            console.log(stuName);
-        })
+        // promptBtn.addEventListener("click", ()=>{
+        //     let stuName = document.getElementsByClassName("stuName")[0].value;
+        //     let promptBtn = document.querySelector("#promptBtn");
+        //     if (stuName == "") {
+        //         document.getElementsByClassName("prompt_box")[0].style.display = "flex";
+        //         document.getElementsByClassName("stuName")[0].focus();
+        //     } else {
+        //         document.getElementsByClassName("prompt_box")[0].style.display = "none";
+        //     }
+        //     console.log(stuName);
+        // })
         //Gp calculation code is here
 
         let totalUnits = 0;
@@ -534,9 +533,9 @@
         // newForm.appendChild(subInp);
         
     </script>
-    <script src="./JS_FILES/change-theme.js"></script>
-    <script src="./JS_FILES/navigation.js"></script>
+    <script src="./change-theme.js"></script>
+    <script src="./navigation.js"></script>
     <!-- <script src="js_files/toggle-switch.js"></script> -->
-    <script src="./JS_FILES/change-theme.js"></script>
+    <script src="./change-theme.js"></script>
 </body>
 </html>
